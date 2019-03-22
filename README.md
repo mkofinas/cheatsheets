@@ -5,6 +5,8 @@ Cheatsheets for CLI commands I use.
 
 ### SGE (Sun Grid Engine)
 
+Note: The brackets are not literal, **but** the curly brackets are.
+
 - Submit Jobs:
   - `qsub [script]`: Submit a job that will execute the specified script
   - `qsub [script] [arguments]`: Submit a job that will execute the specified script with the specified arguments
