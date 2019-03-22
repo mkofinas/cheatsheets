@@ -18,6 +18,7 @@ Note: The brackets are not literal, **but** the curly brackets are.
   - `qdel {[job_id_i]..[job_id_j]}`: Delete jobs in the specified range (including both ends)
 - View job statuses:
   - `qstat -f`: Display "full" information on all queues for all users
+  - `qstat -j [job_list]`: Display information for the specified jobs (comma separated)
   - `qstat -u [user_name]`: Display information on all queues for the specified user
   - `qstat -q [queue_name]`: Display information on the specified queue
   - The options above can be combined, e.g.:
