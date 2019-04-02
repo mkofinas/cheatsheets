@@ -49,3 +49,8 @@ __NOTE__: `[user]@[host]` can be simplified by using aliased in `$HOME/.ssh/conf
 - `Prefix`+`Ctrl-r`: Restore tmux session, even after reboot (requires [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect))
 - `Prefix`+`?`: Help
 - `Prefix`+`/`: Search
+
+### Watch
+- `watch -t [command]`: Execute command periodically every 2 seconds and display output without the command title (`-t` option)
+- `watch -t -n [seconds.deciseconds] [command]`: Execute command periodically using the specified interval and display output
+- `watch -t -d [command]`: Execute command periodically and display output, highlighting the differences
