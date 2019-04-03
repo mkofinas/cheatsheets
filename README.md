@@ -37,11 +37,20 @@ __NOTE__: `[user]@[host]` can be simplified by using aliased in `$HOME/.ssh/conf
 
 ### SLURM
 
-- `srun -u --pty --gres=gpu:1 bash -i`: Allocate 1 GPU (`--gres=gpu:1`) and run bash interactively (`bash -i`)
-- `srun -u --pty --gres=gpu:1 -t 2-0 bash -i`: Allocate 1 GPU and run bash interactively for 2 days (`-t 2-0`)
-- `srun -u --pty --gres=gpu:1 -t 2:30:00 bash -i`: Allocate 1 GPU and run bash interactively for 2 and a half hours (`-t 2:30:00`)
-- `srun -u --pty --gres=gpu:1 -C [constraint] bash -i`: Allocate 1 GPU and run bash interactively when the constraint (e.g. TitanX) is met
-- `srun -u --pty --gres=gpu:1 [script]`: Allocate 1 GPU (`--gres=gpu:1`) and run the specified script
+- Run Jobs
+  - `srun -u --pty --gres=gpu:1 bash -i`: Allocate 1 GPU (`--gres=gpu:1`) and run bash interactively (`bash -i`)
+  - `srun -u --pty --gres=gpu:1 -t 2-0 bash -i`: Allocate 1 GPU and run bash interactively for 2 days (`-t 2-0`)
+  - `srun -u --pty --gres=gpu:1 -t 2:30:00 bash -i`: Allocate 1 GPU and run bash interactively for 2 and a half hours (`-t 2:30:00`)
+  - `srun -u --pty --gres=gpu:1 -C [constraint] bash -i`: Allocate 1 GPU and run bash interactively when the constraint (e.g. TitanX) is met
+  - `srun -u --pty --gres=gpu:1 [script]`: Allocate 1 GPU (`--gres=gpu:1`) and run the specified script
+- Submit batch jobs
+  - `sbatch [script]`: Submit a script job (using SBATCH commands in the script to specify options)
+- View information about jobs:
+  - `squeue`: View information about jobs from all users
+  - `squeue -u [user]`: View information about jobs submitted from the specified user
+- View job configuration:
+  -`scontrol show job`: View configuration for all jobs
+  -`scontrol show job [job_id]`: View configuration for the specified job
 
 ### Tmux
 
